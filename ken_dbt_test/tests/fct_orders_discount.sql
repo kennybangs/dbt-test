@@ -1,0 +1,3 @@
+SELECT *
+FROM {{ ref('fct_orders') }}
+WHERE ITEM_DISCOUNTED_AMOUNT > 0

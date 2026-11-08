@@ -1,0 +1,4 @@
+SELECT *
+FROM {{ ref('fct_orders') }}
+WHERE DATE(ORDER_DATE) > CURRENT_DATE()
+    OR DATE(ORDER_DATE) < date('1999-01-01')
